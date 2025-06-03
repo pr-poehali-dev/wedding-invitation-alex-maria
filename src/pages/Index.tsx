@@ -1,11 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import WeddingHeader from "@/components/WeddingHeader";
+import EventSchedule from "@/components/EventSchedule";
+import DressCodeInfo from "@/components/DressCodeInfo";
+import RSVPButton from "@/components/RSVPButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="min-h-screen py-8 px-4">
+      <div className="max-w-4xl mx-auto">
+        <WeddingHeader />
+        <EventSchedule />
+        <DressCodeInfo />
+        <RSVPButton />
+
+        <div className="text-center mt-12 mb-8">
+          <p className="font-cormorant text-emerald-600 italic">
+            С любовью и нетерпением ждем встречи с вами! 💚
+          </p>
+        </div>
       </div>
     </div>
   );
