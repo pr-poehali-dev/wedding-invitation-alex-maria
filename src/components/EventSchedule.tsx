@@ -36,7 +36,7 @@ const EventSchedule = () => {
                   <span className="font-cormorant text-xl text-emerald-700 font-semibold">
                     {item.time}
                   </span>
-                  <span className="font-cormorant text-lg text-emerald-600">
+                  <span className="font-cormorant text-lg text-emerald-600 px-[1px]">
                     {item.event}
                   </span>
                 </div>
