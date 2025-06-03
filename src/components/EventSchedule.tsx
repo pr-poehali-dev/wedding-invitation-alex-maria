@@ -32,7 +32,7 @@ const EventSchedule = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between my-0 py-0 px-0 mx-0 rounded-3xl">
                   <span className="font-cormorant text-xl text-emerald-700 font-semibold">
                     {item.time}
                   </span>
