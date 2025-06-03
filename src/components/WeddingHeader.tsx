@@ -4,7 +4,7 @@ const WeddingHeader = () => {
   return (
     <div className="text-center mb-12">
       <div className="mb-6">
-        <h1 className="font-dancing text-6xl md:text-8xl mb-4 text-[#d43211]">
+        <h1 className="font-dancing text-6xl md:text-8xl mb-4 text-emerald-600">
           Александр и Мария
         </h1>
         <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto mb-6"></div>

@@ -38,12 +38,29 @@ const RSVPButton = () => {
         status: "Подтвердил участие",
       };
 
-      // В реальном проекте здесь была бы отправка в Google Sheets API
-      // Для демонстрации просто логируем данные
-      console.log("Данные гостя для Google Sheets:", guestData);
+      // Отправляем данные в Google Sheets через Google Apps Script
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzYourScriptIdHere/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: guestData.firstName,
+            lastName: guestData.lastName,
+            timestamp: guestData.timestamp,
+            status: guestData.status,
+            spreadsheetId: "1AQQ8YG-0qmM8qexrJFVaW_4VLvBuG2twBsBYe1_X0wI",
+          }),
+        },
+      );
 
-      // Имитация отправки данных
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (!response.ok) {
+        throw new Error("Ошибка при отправке данных");
+      }
+
+      console.log("Данные успешно отправлены в Google Sheets");
 
       setIsConfirmed(true);
     } catch (error) {
